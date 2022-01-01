@@ -1,0 +1,16 @@
+ {{#each posts}}
+ 
+ <section class="post-section">
+            <div class="post-list">
+                <div class="post-item">
+                    <h4>{{title}}</h4><br>
+                    <div class="post-content">
+                        {{text}}
+                    </div>
+                </div>
+            </div>
+        </section>
+ {{else}}
+<p>Chưa có bài viết nào</p>
+{{/each}}
+       

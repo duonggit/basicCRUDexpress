@@ -1,0 +1,25 @@
+{{#each posts}}
+<section class="post-section">
+            <div class="post-list">
+                <div class="post-item">
+                    <h4>{{title}}</h4><br>
+                    <p class="post-content">
+                        {{text}}
+                    </p>
+                    <div class="post-footer">
+                      <div class="btn-container">
+                        <div class="post-edit-delete">  
+                          <button class="btn btn-edit" onclick="window.location.href='/posts/edit/{{_id}}';">Edit</button><br>
+                         <form class="form-btn-submit" action="/posts/{{_id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                             <button type="submit" class="btn btn-submit">Delete</button>
+                        </form>  
+                        </div>
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </section>
+{{else}}
+<p>Chưa có bài viết nào</p>
+{{/each}}
